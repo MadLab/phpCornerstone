@@ -1,0 +1,8 @@
+# If a file/directory exists in webRoot it will be served, otherwise the request is routed to index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+    # Disable directory browsing
+    Options All -Indexes

@@ -1,0 +1,10 @@
+phpCornerstone
+
+Directories
+/cornerstone - Framework files, do not modify.
+/helpers
+/libraries
+/models
+/pages - This is where your controllers and views go.
+/storage - You must CHMOD this 777,
+/webRoot - This is where all files outside the framework should go.

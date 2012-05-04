@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * phpCornerstone Custom Routes
+ *
+ */
+
+
