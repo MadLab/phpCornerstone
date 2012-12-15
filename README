@@ -7,8 +7,7 @@ phpCornerstone is a MVC framework focused on code organization, intelligent rout
 REQUIREMENTS
 ------------
 
-phpCornerstone was built on the Apache server, with PHP 5.3 and above. We aren't saying that it 
-won't work with other configurations, just that they're untested. 
+phpCornerstone was built on the Apache server, with PHP 5.3 and above. We aren't saying that it won't work with other configurations, just that they're untested. 
 
 
 INSTALLATION
