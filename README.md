@@ -15,6 +15,7 @@ INSTALLATION
 
 Just place everything in the public_html folder. Then, just CHMOD 777 the 'storage' folder. You should see the following:
 
+- **config/** - configuration files
 - **cornerstone/** - phpCornerstone core files
 - **helpers/** - Place helper functions, typically containing static functions, here. Helpers are auto-loaded.
 - **libraries/** - 3rd party code libraries, etc go here. Libraries can be loaded with $cs->loadLibrary();
@@ -23,7 +24,6 @@ Just place everything in the public_html folder. Then, just CHMOD 777 the 'stora
 - **storage/** - Place for template cache, and any storage your app may need. Chmod 777 this folder. 
 - **webRoot/** - Acts as the new 'public_html' folder - can place non-app code, static files, etc here
 - **.htaccess** - Apache file required for phpCornerstone to work
-- **config.php** - Config
 - **routes.php** - File for defining custom URL mapping
 
 
