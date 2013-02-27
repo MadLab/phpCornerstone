@@ -11,7 +11,7 @@ define('STORAGE_PATH', APP_PATH . '/storage/');
 define('LIBRARY_PATH', APP_PATH . '/libraries/');
 define('HELPER_PATH', APP_PATH . '/helpers/');
 
-define('CONFIG_FILE', APP_PATH . '/config.php');
+define('CONFIG_FILE', APP_PATH . '/conf/conf.loader.php');
 define('ROUTES_FILE', APP_PATH . '/routes.php');
 define('BOOTSTRAP_FILE', APP_PATH . '/bootstrap.php');
 define('CONTROLLER_PATH', APP_PATH . '/pages/');
