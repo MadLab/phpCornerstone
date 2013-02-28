@@ -7,7 +7,7 @@
 // Paths
 Config::set('NAKED_DOMAIN', 'example.com');
 Config::set('DEFAULT_SUBDOMAIN', 'www');
-Config::set("SMARTY_PLUGIN_DIRECTORY", dirname(__FILE__) . '/libraries/smartyPlugins/');
+Config::set("SMARTY_PLUGIN_DIRECTORY", APP_PATH . '/libraries/smartyPlugins/');
 
 
 // Maintenance
