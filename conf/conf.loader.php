@@ -5,4 +5,5 @@
  */
 
 include('server.conf.php');
+include('smarty.conf.php');
 include('app.conf.php');
