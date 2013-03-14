@@ -30,4 +30,4 @@ Just place everything in the public_html folder. Then, just CHMOD 777 the 'stora
 THE END
 -----------
 
-In the future we would love to have proper documentation, tutorials, reference material, etc. Until then, this is the best you got (sorry). Contact Us if you have any questions, or would like to help out. 
+In the future we would love to have proper documentation, tutorials, reference material, etc to [phpCornerstone.com](http://www.phpcornerstone.com/). Until then, this is the best you got (sorry). Contact Us if you have any questions, or would like to help out. 
