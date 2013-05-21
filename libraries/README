@@ -1,3 +1,3 @@
 LIBRARIES
 
-Want PEAR included? Put it here.
+Want PEAR included? Put it here. For composer just run it in root, and let it create the /vendor directory.
