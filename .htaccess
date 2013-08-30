@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule    ^$ webRoot/    [L]
+RewriteRule    (.*) webRoot/$1 [L]
