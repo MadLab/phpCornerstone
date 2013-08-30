@@ -16,7 +16,7 @@
     "repositories": [
         {
             "type":"vcs",
-            "url":"/home/vagrant/madlabs.com/PHPCornerstone-Core"
+            "url": "https://bitbucket.org/madlab/phpcornerstone-core"
         }
     ],
     "require": {
