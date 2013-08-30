@@ -1,8 +1,15 @@
 <?php
 
-class page extends Controller{
+namespace MadLab\Cornerstone\Pages;
 
-   public function get(){
 
-   }
+class Controller extends \MadLab\Cornerstone\Controller
+{
+
+    public function get()
+    {
+
+        $user = new \User();
+
+    }
 }
