@@ -1,0 +1,31 @@
+{
+    "name": "MadLab/PHPCornerstone",
+    "description": "The PHP Cornerstone Framework",
+    "keywords": ["framework, cornerstone, phpcornerstone"],
+    "homepage": "http://www.phpcornerstone.com",
+    "authors": [
+        {
+            "name": "Nick Ashley",
+            "email": "nick@madlab.com"
+        },
+        {
+            "name": "Robert Gentel",
+            "email": "robert@madlab.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type":"vcs",
+            "url":"git@bitbucket.org:madlab/phpcornerstone-core.git"
+        }
+    ],
+    "require": {
+        "MadLab/PHPCornerstone-Core": "*"
+    },
+    "autoload": {
+        "classmap": [
+            "models"
+        ]
+    },
+    "minimum-stability": "dev"
+}

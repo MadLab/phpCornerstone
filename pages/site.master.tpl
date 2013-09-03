@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>{block name="pageTitle"}{/block}</title>
+	<title>{% block pageTitle %}{% endblock %}</title>
 
     <!-- Le styles -->
     <style type="text/css">
@@ -49,10 +49,10 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	{block name="head"}{/block}
+	{% block head %}{% endblock %}
 </head>
 <body>
-	{block name="page"}{/block}
-	{block name="tailJs"}{/block}
+	{% block page %}{% endblock %}
+	{% block tailJs %}{% endblock %}
 </body>
 </html>

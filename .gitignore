@@ -4,6 +4,8 @@
 
 /.idea/
 /.settings/
+/storage/cache/templates
+vendor/
 
 #--------------------------------------------------
 # OS-GENERATED FILES
