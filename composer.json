@@ -28,7 +28,7 @@
     "autoload": {
         "classmap": [
             "models",
-            "helpers",
+            "helpers"
         ]
     },
     "minimum-stability": "dev"
