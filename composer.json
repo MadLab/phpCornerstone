@@ -20,13 +20,15 @@
         }
     ],
     "require": {
-        "MadLab/PHPCornerstone-Core": "*"
+        "MadLab/PHPCornerstone-Core": "*",
+        "respect/validation": "dev-develop",
+        "ircmaxell/password-compat": "dev-master",
+        "twig/twig": "1.14.*@dev"
     },
     "autoload": {
         "classmap": [
             "models",
             "helpers",
-            "libraries"
         ]
     },
     "minimum-stability": "dev"

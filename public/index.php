@@ -11,10 +11,13 @@ require 'vendor/autoload.php';
 
 $cs = \MadLab\Cornerstone\App::getInstance($path);
 
-//$template = new \MadLab\Cornerstone\TemplateManager\Smarty();
-//$cs->setTemplateManager($template);
-//$cs->addDependancy('Database', 'DB Class');
+$twigLoader = new Twig_Loader_Filesystem('pages');
+$twig = new Twig_Environment($twigLoader, array(
+    'cache' => 'storage/templates',
+));
+$template = new \MadLab\Cornerstone\Components\TemplateBridges\TwigTemplateBridge($twig);
 
+$cs->setTemplateHandler($template);
 $cs->run();
 
 
