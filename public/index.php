@@ -11,6 +11,15 @@ require 'vendor/autoload.php';
 
 $cs = \MadLab\Cornerstone\App::getInstance($path);
 
+//Detect Environments
+/*
+$cs->detectEnvironment(array(
+    'local'=>'example.local',
+    'production'=>'example.com'
+));
+*/
+
+
 $twigLoader = new Twig_Loader_Filesystem('pages');
 $twig = new Twig_Environment($twigLoader, array(
     'cache' => 'storage/templates',
