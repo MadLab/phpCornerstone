@@ -1,7 +1,7 @@
 {
     "name": "madlab/phpcornerstone",
     "description": "The PHP Cornerstone Framework",
-    "keywords": ["framework, cornerstone, phpcornerstone"],
+    "keywords": ["framework cornerstone phpcornerstone"],
     "homepage": "http://www.phpcornerstone.com",
     "authors": [
         {
