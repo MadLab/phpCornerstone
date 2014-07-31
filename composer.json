@@ -23,7 +23,7 @@
         "MadLab/PHPCornerstone-Core": "*",
         "respect/validation": "dev-develop",
         "ircmaxell/password-compat": "dev-master",
-        "twig/twig": "1.14.*@dev"
+        "smarty/smarty": "dev-trunk"
     },
     "autoload": {
         "classmap": [

@@ -19,14 +19,17 @@ $cs->detectEnvironment(array(
 ));
 */
 
+$smarty = new Smarty();
+$smarty->setTemplateDir('pages');
+$smarty->setCompileDir('storage/templates');
+$smarty->registerClass('App', '\MadLab\Cornerstone\App');
 
-$twigLoader = new Twig_Loader_Filesystem('pages');
-$twig = new Twig_Environment($twigLoader, array(
-    'cache' => 'storage/templates',
-));
-$template = new \MadLab\Cornerstone\Components\TemplateBridges\TwigTemplateBridge($twig);
+$template = new \MadLab\Cornerstone\Components\TemplateBridges\SmartyTemplateBridge($smarty);
 
 $cs->setTemplateHandler($template);
+
+include('bootstrap.php');
+
 $cs->run();
 
 
