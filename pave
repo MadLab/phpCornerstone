@@ -1,0 +1,133 @@
+#!/usr/bin/env php
+<?php
+use MadLab\Cornerstone\Components\DataStores\MySQL\MySQL;
+use Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeSessionHandler;
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
+$path = getcwd();
+
+require 'vendor/autoload.php';
+
+$cs = \MadLab\Cornerstone\App::getInstance($path);
+
+$connectionParameters = array();
+$connectionParameters['host'] = Config::get('database.host');
+$connectionParameters['user'] = Config::get('database.user');
+$connectionParameters['password'] = Config::get('database.password');
+$connectionParameters['dbname'] = Config::get('database.dbname');
+
+MySQL::getConnection($connectionParameters);
+
+
+if(count($argv) < 2){
+    showHelp();
+}
+switch($argv[1]){
+    case 'db:migrate':
+        db_migrate();
+        break;
+    case 'db:generate':
+        $file ='migrations/' . \Carbon\Carbon::now()->format('YmdHis') . '.sql';
+        touch($file);
+        echo "Created migration: $file";
+        die();
+        break;
+
+    default:
+        showHelp();
+        break;
+}
+
+
+function showHelp(){
+    echo "Options:
+        db:migrate - execute latest database changes
+        db:generate - create empty timestamped migration file
+";
+    die();
+}
+
+function db_migrate(){
+    try{
+        $currentVersion = MySQL::getValue("select `value` from config where `configKey` = 'version'");
+    }
+    catch(Exception $e){
+        MySQL::set("
+          CREATE TABLE `config` (
+             `configKey` varchar(255) NOT NULL DEFAULT '',
+             `value` varchar(255) DEFAULT '',
+
+
+             PRIMARY KEY (`configKey`)
+           ) ENGINE=MyISAM DEFAULT CHARSET=utf8
+        ");
+        $currentVersion = 0;
+    }
+
+    $migrations = array();
+    $folder = opendir('migrations');
+    while(false !== ($file = readdir($folder))){
+        if($file != "." && $file != ".."){
+            if(preg_match('|([0-9]{14}).sql|', $file, $matches)){
+                $fileNameDate = $matches[1];
+                if($fileNameDate > $currentVersion){
+                    $migrations[$fileNameDate] = $file;
+                }
+            }
+        }
+    }
+
+    if(count($migrations) < 1){
+        echo "\n---[ PHPCornerstone DB Migration ]---\n";
+        echo "Your database is up to date. Version is: $currentVersion\n";
+        die();
+    }
+    $keys = array_keys($migrations);
+    $lastMigration = end($keys);
+    closedir($folder);
+    ksort($migrations);
+    echo "\n---[ PHPCornerstone DB Migration ]---\n";
+    echo "Your current database version is: $currentVersion\n";
+    echo "Latest Version is: " . $lastMigration . "\n";
+    echo "Database is " . count($migrations) . " migrations behind.\n";
+    echo "-------------------------------------\n";
+    echo "Enter version number to migrate to\n";
+    echo "'up' for latest, or 'q' to quit.\n";
+    echo "Choice: ";
+
+    $handle = fopen("php://stdin", "r");
+    $input = trim(fgets($handle));
+    if($input == 'up'){
+        $target = $lastMigration;
+    }
+    elseif(intval($input)){
+        $target = intval($input);
+    }
+    else{
+        echo "Exiting. No changes have been made.\n";
+        exit();
+    }
+
+    echo $target;
+    if($target < $currentVersion){
+        echo "Reverting not implemented for this database";
+        die();
+    }
+    else{
+        foreach($migrations as $date=>$file){
+            if($date <= $target){
+                echo "-> Applying: " . $date . "...";
+                $sql = file_get_contents('migrations/' . $file);
+                MySQL::get($sql);
+                MySQL::update('config', array('value'=>$date), array('configKey'=>'version'));
+                echo "done.\n";
+                $currentVersion = $date;
+            }
+        }
+        echo "-------------------------------------\n";
+        echo "Database now at version: $currentVersion\n";
+    }
+}
