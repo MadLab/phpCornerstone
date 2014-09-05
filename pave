@@ -1,7 +1,6 @@
 #!/usr/bin/env php
 <?php
 use MadLab\Cornerstone\Components\DataStores\MySQL\MySQL;
-use Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeSessionHandler;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -35,7 +34,32 @@ switch($argv[1]){
         echo "Created migration: $file";
         die();
         break;
+    case 'create:page':
 
+        $blankController = array();
+        $blankController[] = "<?php";
+        $blankController[] = "";
+        $blankController[] = "class Controller extends \MadLab\Cornerstone\Controller";
+        $blankController[] = "{";
+        $blankController[] = "";
+        $blankController[] = "    public function get()";
+        $blankController[] = "    {";
+        $blankController[] = "";
+        $blankController[] = "    }";
+        $blankController[] = "}";
+        $blankControllerContents = implode("\n", $blankController);
+
+        $path = "pages/" . $argv[2] . "/Controller.php";
+        $tplPath = "pages/" . $argv[2] . "/view.tpl";
+        if(!file_exists("pages/" . $argv[2])){
+
+            mkdir("pages/" . $argv[2], 0777, true);
+        }
+
+        file_put_contents($path, $blankControllerContents);
+        touch($tplPath);
+
+        break;
     default:
         showHelp();
         break;
@@ -46,6 +70,7 @@ function showHelp(){
     echo "Options:
         db:migrate - execute latest database changes
         db:generate - create empty timestamped migration file
+        create:page - create controller and view for new path
 ";
     die();
 }
