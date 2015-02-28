@@ -5,7 +5,6 @@ use MadLab\Cornerstone\Components\DataStores\MySQL\MySQL;
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-
 $path = getcwd();
 
 require 'vendor/autoload.php';
