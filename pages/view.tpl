@@ -15,8 +15,8 @@
 
     <hr>
 
-    <div class="row-fluid marketing">
-        <div class="span6">
+    <div class="row marketing">
+        <div class="col-sm-6">
             <h4>Where is the Documentation?</h4>
             <p>All developers agree that documentation is good. They also all agree that it's a pain to write them, this is why there are no docs yet. Bother us if you want them sooner.</p>
 
@@ -27,7 +27,7 @@
             <p>Right now it's really just from looking at the code. We haven't gotten around to anything else yet.</p>
         </div>
 
-        <div class="span6">
+        <div class="col-sm-6">
             <h4>Is anything ready?</h4>
             <p>Well the code works, we've been using it for a while, but you have to realize you are asking me all these questions literally the minute I started putting up our site.</p>
 
