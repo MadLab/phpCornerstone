@@ -7,23 +7,22 @@ phpCornerstone is a MVC framework focused on code organization, intelligent rout
 REQUIREMENTS
 ------------
 
-phpCornerstone was built on the Apache server, with PHP 5.3 and above. We aren't saying that it won't work with other configurations, just that they're untested. 
+phpCornerstone was built on the Apache server, with PHP 5.3 and above. To use it on other web servers you only need to replace the .htaccess file and rewrite the traffic to the index.php file with your preferred server's regex rewrite method.
 
 
 INSTALLATION
 ------------
 
-Just place everything in the public_html folder. Then, just CHMOD 777 the 'storage' folder. You should see the following:
+Just place everything in the public_html folder. Then, just CHMOD -R 777 the 'storage' folder. You should see the following:
 
-- **config/** - configuration files
-- **cornerstone/** - phpCornerstone core files
-- **helpers/** - Place helper functions, typically containing static functions, here. Helpers are auto-loaded.
+- **config/** - Auto-loaded configuration files
+- **helpers/** - Auto-loaded helper functions, typically containing static functions
 - **libraries/** - 3rd party code libraries, etc go here. Libraries can be loaded with $cs->loadLibrary();
 - **models/** - Your applications models go here. They will be auto-loaded. 
 - **pages/** - Controllers and Views both go here, and will be auto-mapped to URLs.
-- **storage/** - Place for template cache, and any storage your app may need. Chmod 777 this folder. 
-- **webRoot/** - Acts as the new 'public_html' folder - can place non-app code, static files, etc here
-- **.htaccess** - Apache file required for phpCornerstone to work
+- **storage/** - Place for template cache, and any storage your app may need. Chmod -R 777 this folder.
+- **public/** - Acts as the 'public_html' folder - can place non-app code, static files, etc here
+- **.htaccess** - Apache file that routes all requests to index.php
 - **routes.php** - File for defining custom URL mapping
 
 
