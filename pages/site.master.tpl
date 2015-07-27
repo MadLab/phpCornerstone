@@ -12,7 +12,8 @@
 
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cosmo/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
     <style type="text/css">
         /* Space out content a bit */
@@ -109,11 +110,12 @@
     <div class="header clearfix">
         <nav>
             <ul class="nav nav-pills pull-right">
-                <li role="presentation" class="active"><a href="/">Home</a></li>
-                <li role="presentation"><a href="https://github.com/MadLab/phpCornerstone/archive/master.zip" target="_blank">Download</a></li>
+                <li role="presentation"><a href="/docs"><i class="fa fa-file-o"></i> Docs</a></li>
+                <li role="presentation"><a href="https://github.com/MadLab/phpCornerstone/archive/master.zip"><i class="fa fa-download"></i> Download</a></li>
+                <li role="presentation"><a href="https://github.com/MadLab/phpCornerstone"><i class="fa fa-github"></i> Github</a></li>
             </ul>
         </nav>
-        <a href="/"><img src="http://www.phpcornerstone.com/img/logo.png"></a>
+        <a href="/"><img src="/assets/img/logo-white.png" alt="phpCornerstone"></a>
     </div>
 
     {block name="page"}{/block}
