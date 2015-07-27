@@ -12,7 +12,7 @@
 
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cosmo/bootstrap.min.css" rel="stylesheet">
 
     <style type="text/css">
         /* Space out content a bit */
@@ -61,7 +61,6 @@
         /* Main marketing message and sign up button */
         .jumbotron {
             text-align: center;
-            background: #ffffff;
             border-bottom: 1px solid #e5e5e5;
         }
         .jumbotron .btn {
@@ -124,6 +123,8 @@
     </footer>
 
 </div> <!-- /container -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 {block name="tailJs"}{/block}
 
