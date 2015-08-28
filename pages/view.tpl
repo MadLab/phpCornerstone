@@ -1,41 +1,47 @@
 {extends file="site.master.tpl"}
+
 {block name="pageTitle"}phpCornerstone - A PHP Framework from MadLab, LLC{/block}
+
 {block name="head"}
 
 {/block}
+
 {block name="page"}
+    <div class="jumbotron">
+        <h1>phpCornerstone</h1>
+        <p>A lightweight php framework by MadLab.com</p>
+        <a class="btn btn-large btn-success" href="https://github.com/MadLab/phpCornerstone/archive/master.zip"><i class="fa fa-download"></i> Download phpCornerstone</a>
+    </div>
 
-<div class="jumbotron">
-  <h1>phpCornerstone</h1>
-  <p class="lead">Download the phpCornerstone framework today to get started.</p>
-  <a class="btn btn-large btn-success" href="https://github.com/MadLab/phpCornerstone/archive/master.zip" target="_blank">Download phpCornerstone</a>
-</div>
+    <hr>
 
-<hr>
+    <div class="row marketing">
+        <div class="col-sm-6">
+            <h4><i class="fa fa-cube"></i> What is phpCornerstone?</h4>
+            <p>phpCornerstone is a lightweight PHP framework that focused on code organization, intelligent routing, and facilitating DRY principles.</p>
 
-<div class="row-fluid marketing">
-  <div class="span6">
-    <h4>Where is the Documentation?</h4>
-    <p>All developers agree that documentation is good. They also all agree that it's a pain to write them, this is why there are no docs yet. Bother us if you want them sooner.</p>
+            <h4><i class="fa fa-life-ring"></i> How do I get support?</h4>
+            <p>phpCornerstone is free, open source software but if you need paid support contact <a href="http://www.madlab.com">MadLab</a> and we'd be happy to help you.</p>
+       </div>
 
-    <h4>What templating system does it use?</h4>
-    <p>Smarty, with some tooling to make things a bit easier to use with the phpCornerstone framework.</p>
+        <div class="col-sm-6">
+            <h4><i class="fa fa-question-circle"></i> Who is behind phpCornerstone</h4>
+            <p>phpCornerstone is maintained by <a href="http://www.madlab.com/">MadLab, LLC</a>. <a href="http://www.madlab.com/is/nickashley">Nick Ashley</a> is the lead programmer and <a href="http://www.madlab.com/is/robertgentel">Robert Gentel</a> occasionally contributes to the project.</p>
 
-    <h4>Where can I find out more information?</h4>
-    <p>Right now it's really just from looking at the code. We haven't gotten around to anything else yet.</p>
-  </div>
+            <h4><i class="fa fa-code-fork"></i> How can I contribute?</h4>
+            <p>We welcome anyone who wants to help. Please <a href="https://github.com/MadLab/phpCornerstone" target="_blank">head over to phpCornerstone on GitHub</a> if you would like to contribute.</p>
+        </div>
+    </div>
 
-  <div class="span6">
-    <h4>Is anything ready?</h4>
-    <p>Well the code works, we've been using it for a while, but you have to realize you are asking me all these questions literally the minute I started putting up our site.</p>
-
-    <h4>Who's behind this... thing?</h4>
-    <p><a href="http://www.madlab.com/is/nickashley">Nick Ashley</a> is the lead programmer. <a href="http://www.madlab.com/is/robertgentel">Robert Gentel</a> occasionally contributes to the project.</p>
-
-    <h4>I'm sold! How can I contribute?</h4>
-    <p>We know we have a lot to do, if you want to help <a href="https://github.com/MadLab/phpCornerstone" target="_blank">head over to phpCornerstone on GitHub</a>.</p>
-  </div>
-</div>
-
-
+    <div class="row marketing">
+        <div class="col-sm-12">
+            <h2>Getting Started</h2>
+            <ol>
+                <li><a href="https://github.com/MadLab/phpCornerstone/archive/master.zip">Download <i class="fa fa-cube"></i> phpCornerstone</a> and unzip to a directory where you can run PHP 5.3+</li>
+                <li>Install dependencies by running <code>composer install</code> in the root directory</li>
+                <li>Give write permissions for the storage directory: <code>chmod -R 777 storage</code></li>
+            </ol>
+            <p>That's it! Load it in your browser and you should see the same page you see at <a href="http://phpcornerstone.com">phpCornerstone.com</a>. If you have any problems see the <a href="/docs">documentation</a>.</p>
+        </div>
+    </div>
 {/block}
