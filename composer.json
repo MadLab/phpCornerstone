@@ -1,33 +1,34 @@
 {
-    "name": "madlab/phpcornerstone",
-    "description": "The PHP Cornerstone Framework",
-    "keywords": ["framework cornerstone phpcornerstone"],
-    "homepage": "http://www.phpcornerstone.com",
-    "authors": [
-        {
-            "name": "Nick Ashley",
-            "email": "nick@madlab.com"
-        },
-        {
-            "name": "Robert Gentel",
-            "email": "robert@madlab.com"
-        }
-    ],
-    "repositories": [
-        {
-            "type":"vcs",
-            "url":"https://github.com/MadLab/phpCornerstone-core.git"
-        }
-    ],
-    "require": {
-        "MadLab/PHPCornerstone-Core": "v0.2.2",
-        "smarty/smarty": "3.1.*@dev"
+  "name": "MadLab/PHPCornerstone",
+  "description": "The PHP Cornerstone Framework",
+  "keywords": ["framework, cornerstone, phpcornerstone"],
+  "homepage": "http://www.phpcornerstone.com",
+  "authors": [
+    {
+      "name": "Nick Ashley",
+      "email": "nick@madlab.com"
     },
-    "autoload": {
-        "classmap": [
-            "models",
-            "helpers"
-        ]
-    },
-    "minimum-stability": "dev"
+    {
+      "name": "Robert Gentel",
+      "email": "robert@madlab.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type":"vcs",
+      "url":"/Users/nickashley/Sites/dashbrew/public/framework-core"
+    }
+  ],
+  "require": {
+    "madLab/phpcornerstone-core": "dev-rewrite",
+    "twig/twig": "^1.23"
+  },
+  "autoload": {
+    "classmap": [
+      "models",
+      "libraries",
+      "controllers"
+    ]
+  },
+  "minimum-stability": "dev"
 }
