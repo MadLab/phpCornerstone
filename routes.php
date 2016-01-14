@@ -1,10 +1,14 @@
 <?php
 
-use League\Route\RouteCollection;
+/**
+ * phpCornerstone Routes
+ *
+ */
 
-$router = new RouteCollection();
-$router->get('/', 'MadLab\Controller\IndexController::getIndex');
-$router->get('/test/{id}', 'MadLab\Controller\IndexController::getIndex');
-$dispatcher = $router->getDispatcher();
+use MadLab\Cornerstone\Components\Config;
+use MadLab\Cornerstone\App;
+use MadLab\Cornerstone\Components\Routers\FileRouter;
+use MadLab\Cornerstone\Components\Routers\MapRouter;
 
-$cornerstone->setDispatcher($dispatcher);
+
+App::addRouter(new FileRouter(Config::get('NAKED_DOMAIN'), ''));
