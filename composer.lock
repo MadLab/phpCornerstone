@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e5cb666b8dacd192e023a3aa09580938",
-    "content-hash": "7a183735c37d78d6728e3fbe8ad46c13",
+    "hash": "0b319170a284fc9f5a0a1287fea1198f",
+    "content-hash": "da149cf9f2ed6ac7f7611e90965bb089",
     "packages": [
         {
             "name": "codeception/codeception",
-            "version": "dev-master",
+            "version": "2.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "c656475d35a2d81f44fda036cfa2ffaa0a2d7ab0"
+                "reference": "3554e299464255bb9bf11d3d2e9c8159580e4eee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/c656475d35a2d81f44fda036cfa2ffaa0a2d7ab0",
-                "reference": "c656475d35a2d81f44fda036cfa2ffaa0a2d7ab0",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/3554e299464255bb9bf11d3d2e9c8159580e4eee",
+                "reference": "3554e299464255bb9bf11d3d2e9c8159580e4eee",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2016-01-10 17:15:01"
+            "time": "2016-01-14 23:06:27"
         },
         {
             "name": "doctrine/instantiator",
@@ -475,10 +475,10 @@
             "source": {
                 "type": "git",
                 "url": "/Users/nickashley/Sites/dashbrew/public/framework-core",
-                "reference": "2c84c7dd239de74f91b6ed40cd44effdd6004187"
+                "reference": "1bc770cd8c4a526de127ae45e52595bafc5ae8c4"
             },
             "require": {
-                "codeception/codeception": "*",
+                "codeception/codeception": "^2.1",
                 "league/route": "^1.2",
                 "nesbot/carbon": "~1.19.0",
                 "php": ">=7.0",
@@ -505,9 +505,11 @@
             "description": "PHP Cornerstone: An elegant, minimalist MVC framework.",
             "homepage": "http://www.phpcornerstone.com",
             "keywords": [
-                "framework, mvc"
+                "framework",
+                "microframework",
+                "mvc"
             ],
-            "time": "2016-01-14 04:51:22"
+            "time": "2016-01-15 00:04:26"
         },
         {
             "name": "nesbot/carbon",
@@ -1544,6 +1546,61 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2015-06-21 13:59:46"
+        },
+        {
+            "name": "smarty/smarty",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/smarty-php/smarty.git",
+                "reference": "dd0f4c7c36c349931684723323220889eca635a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/dd0f4c7c36c349931684723323220889eca635a3",
+                "reference": "dd0f4c7c36c349931684723323220889eca635a3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "libs/Smarty.class.php",
+                    "libs/SmartyBC.class.php",
+                    "libs/sysplugins/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Monte Ohrt",
+                    "email": "monte@ohrt.com"
+                },
+                {
+                    "name": "Uwe Tews",
+                    "email": "uwe.tews@googlemail.com"
+                },
+                {
+                    "name": "Rodney Rehm",
+                    "email": "rodney.rehm@medialize.de"
+                }
+            ],
+            "description": "Smarty - the compiling PHP template engine",
+            "homepage": "http://www.smarty.net",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2016-01-02 16:58:58"
         },
         {
             "name": "symfony/browser-kit",

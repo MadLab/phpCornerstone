@@ -1,8 +1,7 @@
 #--------------------------------------------------
 # PHPCORNERSTONE FILES
 #--------------------------------------------------
-config/production
-storage/templates
+config/.env
 vendor/
 .git
 

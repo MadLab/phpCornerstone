@@ -1,7 +1,7 @@
 {
-  "name": "MadLab/PHPCornerstone",
+  "name": "madlab/phpcornerstone",
   "description": "The PHP Cornerstone Framework",
-  "keywords": ["framework, cornerstone, phpcornerstone"],
+  "keywords": ["framework", "cornerstone", "phpcornerstone"],
   "homepage": "http://www.phpcornerstone.com",
   "authors": [
     {
@@ -13,15 +13,10 @@
       "email": "robert@madlab.com"
     }
   ],
-  "repositories": [
-    {
-      "type":"vcs",
-      "url":"/Users/nickashley/Sites/dashbrew/public/framework-core"
-    }
-  ],
   "require": {
-    "madLab/phpcornerstone-core": "dev-rewrite",
-    "twig/twig": "^1.23"
+    "madlab/phpcornerstone-core": "dev-rewrite",
+    "twig/twig": "^1.23",
+    "smarty/smarty": "^3.1"
   },
   "autoload": {
     "classmap": [
