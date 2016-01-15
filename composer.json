@@ -13,6 +13,12 @@
       "email": "robert@madlab.com"
     }
   ],
+  "repositories": [
+    {
+      "type":"vcs",
+      "url":"https://github.com/MadLab/phpCornerstone-core.git"
+    }
+  ],
   "require": {
     "madlab/phpcornerstone-core": "dev-rewrite",
     "twig/twig": "^1.23",
