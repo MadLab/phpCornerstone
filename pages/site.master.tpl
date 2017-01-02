@@ -115,7 +115,7 @@
                 <li role="presentation"><a href="https://github.com/MadLab/phpCornerstone"><i class="fa fa-github"></i> Github</a></li>
             </ul>
         </nav>
-        <a href="/"><img src="/assets/img/logo-white.png" alt="phpCornerstone"></a>
+        <a href="/"><img src="http://phpcornerstone.com/assets/img/logo-white.png" alt="phpCornerstone"></a>
     </div>
 
     {block name="page"}{/block}
